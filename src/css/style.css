@@ -4,8 +4,9 @@ body{
 
 nav{
 	width: 100%;
-	height: 80px;
+	height: 60px;
 	background: #344051;
+	position: fixed;
 }
 
 .logo{
@@ -14,6 +15,9 @@ nav{
 	line-height: 60px;
 	padding-left: 255px;
 	float: left;
+	-webkit-animation: coming 2s ease;
+	-o-animation: coming 2s ease; 
+	animation: coming 2s ease; 
 }
 
 .menu{
@@ -28,12 +32,56 @@ nav{
 	color: #fff;
 	font-size: 16px;
 	text-transform: uppercase;
+	-webkit-animation: topshift 0.4s ease forwards; 
+	-o-animation:topshift 0.4s ease forwards; 
+	animation:topshift 0.4s ease forwards; 
+	opacity: 0;
+}
+
+.menu li:nth-child(2){
+	animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+	animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+	animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+	animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+	animation-delay: 2s;
+}
+
+main{
+	width: 100%;
+	height: 100%;
+}
+
+.menu li a{
+	transition: all 0.3s;
+	transform: scale(1);
+	display: inline-block;
+}
+
+.menu li a:visited{
+	color: white;
+}
+
+.menu li a:hover{
+	color: #e88604;
+}
+
+.menu li a:active{
+	transform: scale(0.9);
 }
 
 .main{
 	width: 100%;
-	height: calc(100% - 80px);
+	height: 100%;
 	background: url(../img/boy.png) 90% 100%/auto 85% no-repeat, url(../img/bg.png) center/cover no-repeat;
+	background-attachment: fixed;
 }
 
 .title__container{
@@ -41,6 +89,13 @@ nav{
 	margin: 200px 0px 0px 404px;
 	color: #2c384a;
 	text-align: center;
+	opacity: 0;
+	-webkit-animation: titlemove 1s ease forwards;
+	-o-animation: titlemove 1s ease forwards;
+	animation: titlemove 1s ease forwards;
+	-webkit-animation-delay: 2s;
+	-o-animation-delay: 2s;
+	animation-delay: 2s;
 }
 
 .title__container h1{
@@ -64,7 +119,51 @@ nav{
 	font-size: 13px;
 	padding: 0px 16px;
 	margin: 50px 14px 0px 14px;
+	transition: all 0.3s;
+	transform: scale(1);
 }
+
+.title__container input:hover{
+	background: #344051;
+	color: #e9e9ee;
+}
+
+.title__container input:active{
+	transform: scale(0.9);
+}
+
+@keyframes coming{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes topshift{
+	from{
+		opacity: 0;
+		margin-top: -80px;
+	}
+	to{
+		opacity: 1;
+		margin-top: 0px;
+	}
+}
+
+@keyframes titlemove{
+	from{
+		opacity: 0;
+		margin-left: -500px;
+	}
+	to{
+		opacity: 1;
+		margin-left: 404px;
+	}
+}
+
+
 
 .title__container1{
 	text-align: center;
@@ -105,15 +204,24 @@ nav{
 	font-size: 13px;
 	padding: 0px 16px;
 	margin: 10px 14px 0px 14px;
-	font-weight: bold;
+	transition: all 0.3s;
+	transform: scale(1);
+}
 
+.text1 input:hover{
+	background: #344051;
+	color: #e9e9ee;
+}
+
+.text1 input:active{
+	transform: scale(0.9);
 }
 
 .title__container2{
 	width: 100%;
 	height: calc(100% - 300px);
 	background: url(../img/bg2.png) center/cover no-repeat;
-
+	background-attachment: fixed;
 }
 
 .title__container2>h2{
@@ -232,7 +340,7 @@ nav{
 .text2 b{
 	color: #384354;
 	font-size: 16px;
-	font-family: Arial;
+	font-family: Arial; 
 }
 
 .text2 a{
@@ -242,21 +350,34 @@ nav{
 	font-size: 16px;
 	text-transform: uppercase;
 	color: #fff;
-	position: relative;
-    top: 15px;
     padding: 10px 40px 10px 40px;
-    background-color: #63b5ae
-
+    float: left;
+    margin-top: 20px;
+    background-color: #63b5ae;
+    transition: all 0.4s;
+    transform: scale(1);
 }
+
+.text2 a:active{
+	transform: scale(0.9);
+}
+
+.text2 a:visited{
+	color: white;
+}
+
+.text2 a:hover{
+	background: #579d97;
+	color: white;
+}
+
+
 
 .text3{
 	float: left;
-	margin-left: 500px;
-	padding-right: 200px;
 	line-height: 20px;
-	position: relative;
-	top: -120px;
-	word-wrap: break-word;
+	margin-left: 100px;
+	margin-top: 15px;
 }
 
 .project_name{
@@ -278,37 +399,37 @@ nav{
 
 .type{
 	float: left;
-	width: 97.5%;
+	width: 100%;
 	font-size: 20px;
 	color: #1c2534;
 	text-transform: uppercase;
 	padding-top: 40px;
 	padding-bottom: 10px;
-	margin-left: 315px;
 	font-weight: bold;
+	padding-left: 30%;
 }
 
 .design{
 	float: left;
-	width: 97.5%;
+	width: 100%;
 	font-size: 20px;
 	color: #1c2534;
 	text-transform: uppercase;
 	padding-top: 20px;
 	padding-bottom: 10px;
-	margin-left: 315px;
+	padding-left: 30%;
 	font-weight: bold;
 }
 
 .adapt{
 	float: left;
-	width: 97.5%;
+	width: 100%;
 	font-size: 20px;
 	color: #1c2534;
 	text-transform: uppercase;
 	padding-top: 20px;
 	padding-bottom: 10px;
-	margin-left: 315px;
+	padding-left: 30%;
 	font-weight: bold;
 }
 
@@ -319,6 +440,7 @@ nav{
 	width: 60%;
 	padding: 12px;
 	float: left;
+
 }
 
 .design_select{
@@ -370,7 +492,6 @@ select{
 	margin-top: 10px;
 }
 
-
 .title__container5 h2{
 	width: 100%;
 	float: left;
@@ -380,6 +501,14 @@ select{
 	margin-top: 40px;
 	color: #384354;
 	font-weight: bold;
+}
+
+.title__container5{
+	float: left;
+	margin-top: 160px;
+	width: 100%;
+	background: url(../img/bg3.png) center/cover no-repeat;
+	background-attachment: fixed;
 }
 
 .line4{
@@ -448,15 +577,6 @@ select{
 	text-transform: uppercase;
 }
 
-
-
-.title__container5{
-	background: url(../img/bg3.png) center/cover no-repeat;
-	float: left;
-	margin-top: 160px;
-	width: 100%;
-}
-
 .line5{
 	float: left;
 	text-align: center;
@@ -522,6 +642,7 @@ footer{
 	width: 100%;
 	margin-top: 100px;
 	height: 600px;
+	background-attachment: fixed;`	
 
 }
 
@@ -583,7 +704,7 @@ textarea{
 	margin-top: -20px;
 }
 
-.submit{
+.send{
 	border: 2px solid #fff;
 	background: none;
 	border-radius: 5px;
@@ -591,6 +712,21 @@ textarea{
 	font-size: 13px;
 	padding: 10px 15px;
 	margin: 10px 14px 0px 14px;
+	transform: scale(1);
+	transition: all 0.3s;
+}
+
+.send:visited{
+	color: white;
+}
+
+.send:hover{
+	background: #dddddd;
+	color: #233447;
+}
+
+.send:active{
+	transform: scale(0.9);
 }
 
 .map img{

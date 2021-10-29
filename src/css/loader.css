@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  background: #e8e8ed;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+.noselect {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.artboard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+.domino > div {
+  border-radius: 8px;
+  display: inline-flex;
+  transform: rotate(45deg);
+  width: 50px;
+  height: 50px;
+  -webkit-animation: domino-effect 2.4s infinite ease-in-out;
+          animation: domino-effect 2.4s infinite ease-in-out;
+}
+.domino > div:nth-child(1) {
+  background: #344051;
+}
+.domino > div:nth-child(1):after {
+  background: #354558;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.domino > div:nth-child(2) {
+  background: #7bb5b0;
+}
+.domino > div:nth-child(2):after {
+  background: #7bb5b0;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.domino > div:nth-child(3) {
+  background: #9c4f66;
+}
+.domino > div:nth-child(3):after {
+  background: #9c4f66;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.domino > div:nth-child(4) {
+  background: #db8755;
+}
+.domino > div:nth-child(4):after {
+  background: #db8755;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.domino > div:nth-child(5) {
+  background: #db8755;
+}
+.domino > div:nth-child(5):after {
+  background: #db8755;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.domino > div:nth-child(1) {
+  margin: 23px;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.domino > div:nth-child(2) {
+  margin: 23px;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.domino > div:nth-child(3) {
+  margin: 23px;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+.domino > div:nth-child(4) {
+  margin: 23px;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+.domino > div:nth-child(5) {
+  margin: 23px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.domino > div:after {
+  content: "";
+  position: relative;
+  top: 0px;
+  left: -70px;
+  opacity: 0;
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: illusion 2.4s infinite ease-in-out;
+          animation: illusion 2.4s infinite ease-in-out;
+}
+
+@-webkit-keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(140deg);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(140deg);
+  }
+}
+@-webkit-keyframes domino-effect {
+  20%, 100% {
+    transform: rotate(135deg);
+  }
+}
+@keyframes domino-effect {
+  20%, 100% {
+    transform: rotate(135deg);
+  }
+}
+@-webkit-keyframes illusion {
+  0%, 25% {
+    opacity: 1;
+  }
+  26.10%, 33.33%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes illusion {
+  0%, 25% {
+    opacity: 1;
+  }
+  26.10%, 33.33%, 100% {
+    opacity: 0;
+  }
+}
+
+
+
+.loading {
+  font-size: 30px;
+  font-family: Arial;
+  text-transform: uppercase;
+  float: left;
+  margin-left: 700px;
+  margin-top: 450px;
+  color: #2c384a;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(30,end) 1200ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}

@@ -264,16 +264,9 @@ main{
 
 .title__container2{
 	width: 100%;
-	height: 70%;
 	background: url(../img/bg2.png) center/cover no-repeat;
 	background-attachment: fixed;
 	
-}
-
-.line2{
-	text-align: center;
-	margin-top: 30px
-
 }
 
 .container3{
@@ -475,6 +468,7 @@ main{
 	padding-top: 40px;
 	padding-bottom: 10px;
 	font-weight: bold;
+	width: 100%;
 }
 
 .custom-select{
@@ -482,6 +476,7 @@ main{
 	height: 45px;
 	color: #747474;
 	font-family: FranklinGot, sans-serif;
+	width: 100%;
 }
 
 .img-fluid{
@@ -500,7 +495,7 @@ main{
 	font-size: 20px;
 }
 
-.title__container5{
+.container8{
 	color: #263244;
 	font-size: 28px;
 	text-transform: uppercase;
@@ -508,8 +503,10 @@ main{
 	padding-top: 100px;
 	margin-top: 100px;
 	font-family: 'FranklinGot', sans-serif;
+}
+
+.title__container5{	
 	width: 100%;
-	height: 70%;
 	background: url(../img/bg3.png) center/cover no-repeat;
 	background-attachment: fixed;
 }
@@ -517,7 +514,7 @@ main{
 
 .p3{
 	color: #293b4f;
-	font-size: 35px;
+	font-size: 30px;
 	font-weight: bold;
 	margin-bottom: 10px;
 	margin-top: 10px;
@@ -529,7 +526,7 @@ main{
 	color: #293b4f;
 	font-family: 'FranklinGot', sans-serif;
 	line-height: 15px;
-	font-size: 20px;
+	font-size: 18px;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 }
@@ -565,7 +562,6 @@ main{
 
 .title__container7{
 	width: 100%;
-	height: 70%;
 	background: url(../img/bg4.png) center/cover no-repeat;
 }
 
@@ -654,7 +650,7 @@ label{
 	border: 1px solid #63b5ae;
 	border-radius: 5px;
 	font-family: FranklinGot, sans-serif;
-	font-size: 18px;
+	font-size: 14px;
 	color: #fff;
     padding: 5px 10px 5px 10px;
     float: left;
@@ -695,14 +691,18 @@ label{
 	text-align: center;
 }
 
-@media screen and (min-width: 574px){
+@media screen and (min-width: 576px){
 	.hiden2{
 		display: none;
 	}
 }
 
-@media screen and (max-width: 574px){
+@media screen and (max-width: 575px){
 	.container6{
 		display: none;
 	}
+}
+
+.tc3{
+	margin-top: -40px;
 }

@@ -68,7 +68,7 @@ function showStartModal(){
 
       $('#exampleModal').modal('hide');
     });
-  }, 1000);
+  }, 7000);
   
 }
 

@@ -64,10 +64,7 @@ $(document).ready(function(){
 function showStartModal(){
   setTimeout(function(){
     $('#exampleModal').modal('show');
-    $('btn-accept').on('click', function(){
-
-      $('#exampleModal').modal('hide');
-    });
+  
   }, 7000);
   
 }

@@ -405,6 +405,7 @@ main{
 	font-family: FranklinGot, sans-serif;
 	color: #102032;
 	font-size: 20px;
+
 }
 
 .send{
@@ -435,7 +436,7 @@ main{
 	color: white;
 }
 
-.p3{
+.out-num{
 	color: #293b4f;
 	font-size: 30px;
 	font-weight: bold;
@@ -545,6 +546,7 @@ main{
 	transform: scale(1);
 	transition: all 0.3s;
 	font-family: FranklinGot, sans-serif;
+	margin-bottom: 100px;
 }
 
 .send1:visited{

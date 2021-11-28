@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 $('a[href^="#"]').click(function(){
 	let valHref = $(this).attr("href");
-	$('html, body').animate({scrollTop: $(valHref).offset().top + "px"});
+	$('html, body').animate({scrollTop: $(valHref).offset().top -73 + "px"});
 });
 
 $(document).ready(function() {
@@ -33,39 +33,40 @@ $(document).ready(function() {
 
 
 
-var check = 1;
-var target = $('.section');
-var targetPos = target.offset().top;
-var winHeight = $(window).height();
-var scrollToElem = targetPos - winHeight;
-
-$(window).scroll(function() {
-  var winScrollTop = $(this).scrollTop();
-  if(winScrollTop > scrollToElem && check) {
-    $('.out-num').each(function() {
-      $(this).prop('Counter', -1).animate({
-        Counter: $(this).text()
-      },{
-        duration: 3000,
-        easing: 'swing',
-        step: function(now) {
-          $(this).text(Math.ceil(now));
-        }
-      });
-    });
-    check = 0;
-  }
-});
-
 $(document).ready(function(){
   showStartModal();
 });
 
 function showStartModal(){
   setTimeout(function(){
-    $('#exampleModal').modal('show');
+    $('#exampleModal1').modal('show');
   
   }, 7000);
   
 }
 
+$(document).ready(function(){
+
+});
+
+$("#inputTel").mask("+7(999) 999-9999");
+
+$('form').submit(function(event){
+
+  if ($("#inputTel").val() == "" || $("#inputEmail1").val() == ""){
+    event.preventDefault()
+    alert("Введите телефон/Email");
+  }
+});
+
+
+document.body.onload = function() {
+
+  setTimeout(function(){
+    var preloader = document.getElementById('page-preloader');
+    if (!preloader.classList.contains('done'))
+    {
+      preloader.classList.add('done');
+    }
+  }, 1000)
+}

@@ -29,6 +29,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   position: absolute;
+  z-index: 10;
 }
 
 .domino > div {
